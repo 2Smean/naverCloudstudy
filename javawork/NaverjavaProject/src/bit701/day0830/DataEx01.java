@@ -1,7 +1,7 @@
 package bit701.day0830;
 //syso control + space 출력문 자동완성
 
-//printf:변환 기호에 의한 출력, 정수:%f, 문자:%c, 문자열%s
+//printf:변환 기호에 의한 출력, 정수:%d,소수:%f, 문자:%c, 문자열%s
 
 
 /*

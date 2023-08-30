@@ -11,7 +11,7 @@ public class OperEx06 {
 		System.out.println(su1*su2); // 28
 		System.out.println(su1/su2); // 1
 		System.out.println((double)su1/su2); // 1.75							 //1.75
-		System.out.println(su%su2);  // 3 : 나머지 
+		System.out.println(su1%su2);  // 3 : 나머지 
 		
 	}
 

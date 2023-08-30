@@ -24,6 +24,7 @@ public class OperEx05 {
 		int m=++a;// 증가 후 대입 
 		int n=b++;// 대입 후 증가
 		System.out.printf("a=%d, b=%d, m=%d, n=%d\n", a,b,m,n);//6,6,6,5
+		//\n줄바꿈
 	}
 
 }
