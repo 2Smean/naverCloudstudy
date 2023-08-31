@@ -19,25 +19,34 @@ public class Ex10_Exam {
 		 *  총금액 : 6000 원
 		 *  5개 이상 10프로 할인된 금액 : 5400원
 		 */
-		
+	
 		Scanner sc=new Scanner(System.in);
 		
-		System.out.println("상품명을 입력하세요!");
-		int name=sc.nextInt();
-		System.out.println("상품명 = "+name);
+		System.out.println("상품명을 입력하세요");
+		String address=sc.nextLine();
 
 		sc.nextLine();
 	
 		System.out.println("수량을 입력하세요!");
-		int many=sc.nextInt();
-		System.out.println("상품명 = "+many);
+		int n=sc.nextInt();
+		System.out.println("수량 = "+n);
+			
 		
 		sc.nextLine();
 		
 		System.out.println("단가를 입력하세요!");
-		int money=sc.nextInt();
-		System.out.println("상품명 = "+money);
+		int m=sc.nextInt();
+		System.out.println("단가 = "+m);
+		
+		int totalCost = n * m;
+		int dcCost = 0;
+		System.out.println("총금액 ="+ totalCost+"원");
+		if(n>=5) {
+			dcCost = totalCost * 9 / 10; System.out.println("5개 이상 10프로 할인된 금액 : "+ dcCost+"원");
+		}
+		
 		//값을 찾는 접근법 :1.변수정하기  2.if 사용, 3.상품명:애플망고 , 4.수량 10개 구매 , 5.단가 : 1000, 6.변수5개 이상 구매시 10프로 할인
+		//일반적으로 단가는 총 가격을 상품의 수량으로 나눈 몫입니다. 만약 할인 쿠폰이 있다면 총 가격에서 할인 가격을 뺀 다음에 단가를 계산하세요
 		
 	}
 
