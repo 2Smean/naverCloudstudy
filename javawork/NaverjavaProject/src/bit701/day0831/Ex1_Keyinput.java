@@ -1,4 +1,4 @@
-package bit701d.day0831;
+package bit701.day0831;
 
 import java.util.Scanner;
 // control + 1 이나 왼쪽의 X표시를 눌러서 원하는 것을 찾는다

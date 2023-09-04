@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="새로운 난수 발생하기" id="btnrnd">
+<!-- 입력창 OK버튼
+    아래에 div(업다운 결과 출력)
+    그 아래 mycar 중 아무거나 사진 부분
+
+    정답을 맞추면, 사진 부분에 자동차 1~15사이 랜덤으로 이미지 출력-->
+    <script>
+        let rnd; //난수를 구할 변수
+        document.getElementById("btnrnd").onclick=function(){
+            //1~100 사이의 난수 구하기
+            rnd=parseInt(Math.random()*100)+1;
+            //console 에 출력
+            console.log(rnd);
+            // 자바의 int를 자바 스크립트에서는 parseInt 사용
+        }
+    </script>
+</body>
+</html>
