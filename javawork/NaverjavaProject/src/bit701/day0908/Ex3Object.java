@@ -36,7 +36,7 @@ public class Ex3Object {
 		// 출력 #2
 		for(Bitcamp b:bit)
 		{
-			System.out.println("** 학생 정보 "+(i+1)+"**");
+			System.out.println("** 학생 정보 **");
 			System.out.println("이름:"+b.name);
 			System.out.println("주소:"+b.address);
 			System.out.println("스터디반:"+Bitcamp.STUDYNAME);
