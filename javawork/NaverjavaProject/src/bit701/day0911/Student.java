@@ -21,7 +21,7 @@ class Student
 //		this.name=name;
 //		birthYear=2000;
 //		score=50;
-		this(name,2000,50)
+		this(name,2000,50);
 	}
 	
 	Student(String name,int birthYear, int score)
@@ -41,6 +41,7 @@ class Student
 		System.out.println("태어난 년도:"+birthYear+",나이:"+(year-birthYear));
 		System.out.println("점수 :"+score+"점");
 		System.out.println("=".repeat(30));
+		
 	}
 }
 	
