@@ -7,6 +7,45 @@ interface Board
 	public void process();
 }
 // 총 4개의 sub class 구현 
+class Insert implements Board
+{
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		System.out.println("게시판에 글을 추가합니다");
+	}
+}
+
+class Delete implements Board
+{
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		System.out.println("게시판에 글을 삭제합니다");
+	}
+}
+
+class Update implements Board
+{
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		System.out.println("게시판에 글을 수정합니다");
+	}
+}
+
+class List implements Board
+{
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+		System.out.println("게시판의 전체 글을 조회합니다");
+	}
+}
+
+
+
+///////////////////////////////
 
 public class Ex7_InterfaceTest {
 	
@@ -20,6 +59,7 @@ public class Ex7_InterfaceTest {
 		Scanner sc=new Scanner(System.in);
 		int num;
 		Board b=null;
+		Exit:
 		while(true)
 		{
 			System.out.println("1.글쓰기 2.글삭제 3.글수정 4.글목록 5.종료");

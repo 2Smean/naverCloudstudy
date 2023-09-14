@@ -27,7 +27,7 @@ class OuterA
 		public void showInnerB()
 		{
 			System.out.println("** static 내부 클래스의 메서드 **");
-			System.out.println("외부 a="+a); //외부의 일반 인스턴스 멤버변수 접근불가능
+//			System.out.println("외부 a="+a); //외부의 일반 인스턴스 멤버변수 접근불가능
 			System.out.println("외부 b="+b);
 			System.out.println("내부 e="+e);
 			System.out.println("내부 f="+f);
