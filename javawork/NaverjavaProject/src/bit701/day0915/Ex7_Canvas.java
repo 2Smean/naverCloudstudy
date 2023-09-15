@@ -1,28 +1,25 @@
 package bit701.day0915;
 
+import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import javax.swing.JButton;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-public class Ex5_ArrayButton extends JFrame{
-	JButton []btn=new JButton[6];
-	String[] buttonTitle= {"노랑","오렌지","분홍","핫핑크","초록","빨강"};
-	Color []buttonColor= {Color.yellow,Color.orange,Color.pink,Color.magenta,
-			Color.green,Color.red};
-	
-	public Ex5_ArrayButton(String title) {
+public class Ex7_Canvas extends JFrame{
+	//캔바스 멤버 변수로 선언 
+	MyCanvas myCanvas=new MyCanvas();
+	public Ex7_Canvas(String title) {
 		// TODO Auto-generated constructor stub
 		super(title);//JFrame 의 문자열을 받는 생성자 호출
 		this.setLocation(300,100);//프레임의 시작위치
-		this.setSize(300,300);//프레임의 너비,높이
+		this.setSize(500,500);//프레임의 너비,높이
 //		this.getContentPane().setBackground(Color.green);//Color 상수를 이용해서 변경
-		this.getContentPane().setBackground(new Color(200,255,180));//0~255의 rgb
+//		this.getContentPane().setBackground(new Color(200,255,180));//0~255의 rgb
 		
 		//디자인이나 이벤트를 구현할 메서드 호출
 		this.setDesign();
@@ -45,59 +42,47 @@ public class Ex5_ArrayButton extends JFrame{
 		});
 	}
 	
-	//배열 버튼 이벤트를 위한 내부클래스 
-	class MyButton implements ActionListener
+	//캔바스 내부 클래스 
+	class MyCanvas extends Canvas
 	{
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			for(int i=0;i<btn.length;i++)
-			{
-				if(e.getSource()==btn[i])
-				{
-					Ex5_ArrayButton.this.getContentPane().setBackground(buttonColor[i]);
-				}
-			}
+		String imageIcon1="D:\\naver0829\\image\\이쁜동물이미지\\C7.png";
+		@Override
+		public void paint(Graphics g) {
+				
+			super.paint(g);
+			
+			//원그리기
+			g.setColor(new Color(255, 100, 255));//선색
+			g.drawOval(50, 50, 100, 100);//테두리선만있는 원 
+			
+			//채워진 원
+			g.setColor(Color.orange);
+			g.fillOval(200, 50, 100, 100);
+			
+			//테두리만 있는 사각형 
+			g.setColor(Color.green);
+			g.drawRect(50, 200, 100, 100);
+			
+			//채워진 사각형
+			g.setColor(Color.pink);
+			g.fillRect(200, 200, 100, 100);
+			
+			Image image1=new ImageIcon(imageIcon1).getImage();
+			//이미지 그리기
+			g.drawImage(image1, 300, 220, this);
+			
+			//크기 변경해서 출력
+			g.drawImage(image1, 300, 30, 100, 100, this);
 		}
 	}
 	
 	private void setDesign() {
-		//레이아웃 변경
-		this.setLayout(new FlowLayout());
-		
-		for(int i=0;i<btn.length;i++)
-		{
-			btn[i]=new JButton(buttonTitle[i]);
-			btn[i].setBackground(buttonColor[i]);
-			this.add(btn[i]);
-			
-			//버튼 이벤트 발생 
-			btn[i].addActionListener(new MyButton());
-		}
+		this.add(myCanvas,"Center");
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Ex5_ArrayButton s=new Ex5_ArrayButton("배열버튼");
+		Ex7_Canvas s=new Ex7_Canvas("캔바스");
 
 
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
