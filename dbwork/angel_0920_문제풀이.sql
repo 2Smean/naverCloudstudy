@@ -9,10 +9,6 @@ create table student (
     spring number(3) default 10,
     ban varchar2(20));
 
-
-
-
-
 --시퀀스 생성  seq_stu  기본(1부터 1씩증가), nocache 추가
 create SEQUENCE seq_stu nocache;
 
