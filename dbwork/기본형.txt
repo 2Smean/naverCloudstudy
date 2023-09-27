@@ -16,14 +16,6 @@
 </script>
 </head>
 <body>
-	<h2>ppt 48페이지 테이블 만들기</h2>
-		<table style="width: 700px;">
-			<caption><b>표연습</b></caption>
-			<tr>
-				<td rowspan="3" ></td>
-			</tr>
-		
-	</table>
-			
+	
 </body>
 </html>
