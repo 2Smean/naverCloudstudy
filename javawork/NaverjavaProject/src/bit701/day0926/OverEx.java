@@ -41,7 +41,7 @@ public class OverEx {
 		shape.draw(); //Shape 클래스의 draw() 호출 -> 동적 바인딩에 의해 Line 클래스의 draw() 실행
 		
 		print(shape);
-		print();
+		print(shape);
 		
 	}
 
