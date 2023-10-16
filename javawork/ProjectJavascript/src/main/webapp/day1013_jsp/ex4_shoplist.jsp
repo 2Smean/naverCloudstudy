@@ -58,7 +58,7 @@ img.photo {
 		%>
 		<tr>
 			<td><%=++n%></td>
-			<td><%=dto.getSanpum()%></td>
+			<td><%=dto.getSangpum()%></td>
 			<td><%=dto.getPrice() %>원</td>
 			<td align=center>
 				<img class="photo" src="../shop/<%=dto.getPhoto() %>.jpg">
