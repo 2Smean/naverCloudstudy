@@ -18,10 +18,10 @@ public class ShopDto {
 		this.color = color;
 	}
 	
-	public String getSanpum() {
+	public String getSangpum() {
 		return sanpum;
 	}
-	public void setSanpum(String sanpum) {
+	public void setSangpum(String sanpum) {
 		this.sanpum = sanpum;
 	}
 	public String getPhoto() {
