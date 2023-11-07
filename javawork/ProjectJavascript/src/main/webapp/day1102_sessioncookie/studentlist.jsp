@@ -9,6 +9,7 @@
 <%
 	String search=request.getParameter("search");
 	StudentDao dao=new StudentDao();
+	
 	List<StudentDto> list=dao.getSearchStudent(search);
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	

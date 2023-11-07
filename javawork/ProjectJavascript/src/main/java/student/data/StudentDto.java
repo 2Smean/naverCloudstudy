@@ -3,10 +3,15 @@ package student.data;
 import java.sql.Timestamp;
 
 public class StudentDto {
+	
 	private String num;
+	
 	private String name;
+	
 	private String blood;
+	
 	private String phone;
+	
 	private Timestamp writeday;
 	
 	public String getNum() {
