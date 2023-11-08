@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     
 <!DOCTYPE html>
 <html>
@@ -18,6 +20,98 @@
     </style>
 </head>
 <body>
+<c:set var="num1" value="7"/>
+<c:set var="num2" value="4"/>
+<h4>num1은 ${num1 }, num1 ${num2 }</h4>
+<table class = "table table-bordered" style = "width:400px;">
+
+	<tr>
+		<th>연산식</th>
+		<th>결 과</th>
+	</tr>
+	<tr>
+		<td>\${num1 + num2}</td>
+		<td>${num1 + num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 - num2}</td>
+		<td>${num1 - num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 * num2}</td>
+		<td>${num1 * num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 / num2}</td>
+		<td>${num1 / num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 div num2}</td>
+		<td>${num1 div num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 % num2}</td>
+		<td>${num1 % num2}</td>
+	</tr>
+	<tr>
+		<td>\${num1 mod num2}</td>
+		<td>${num1 mod num2}</td>
+	</tr>
+	<tr>
+		<td>
+			num 1 증가 
+		</td>
+		<td>
+		<c:set var="num" value="${num1+1}"/>
+		${num1}
+		</td>
+	</tr>
+</table>
+<hr>
+<c:set var="money" value="5678900"/>
+<c:set var="ave" value="78.93678"/>
+<c:set var="num3" value="0.5645678"/>
+${money}<br>
+${ave}<br>
+<fmt:formatNumber value="${money}" type="number"/><br>
+<fmt:formatNumber value="${money}" type="currency" currencySymbol="$"/><br>
+<fmt:formatNumber value="${money}" type="currency" currencySymbol="￦"/><br>
+<fmt:formatNumber value="${num3}" type="percent"/><br>
+<fmt:formatNumber value="${num3}" type="percent" maxFractionDigits="2"/><br>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
