@@ -35,6 +35,8 @@
 </style>
 </head>
 <body>
+<h2>message:${message}</h2>
+<h3>날짜 : <fmt:formatDate value="${today}" pattern="yyyy-MM-dd HH:mm"/></h3>
 	<c:forEach var="dto" items="${list}">
 		<div class="photo">
 		

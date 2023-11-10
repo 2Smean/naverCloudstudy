@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ShopController {
@@ -55,24 +56,41 @@ public class ShopController {
 
 	@GetMapping("/food/morning/brunch")
 	public String brunch(Model model) {
-	
+
 		List<FoodDto> list = new ArrayList<FoodDto>();
-			list.add(new FoodDto("스팸마요덮밥","10.jpg","강남"));
-			list.add(new FoodDto("샌드위치","8.jpg","경기"));
-			list.add(new FoodDto("연근","9.jpg","여의도"));
+		list.add(new FoodDto("스팸마요덮밥", "10.jpg", "강남"));
+		list.add(new FoodDto("샌드위치", "8.jpg", "경기"));
+		list.add(new FoodDto("연근", "9.jpg", "여의도"));
 		model.addAttribute("list", list);
 		model.addAttribute("today", new Date());
 		model.addAttribute("message", "오늘의 브런치 메뉴들");
 		return "list2";
 	}
 
-	@GetMapping("/food/photo/detail")
-	public String list(Model model) {
-		List<FoodDto> list = new ArrayList<FoodDto>();
-			list.add(new FoodDto("미국식백반","K-041.png","미국"));
-			list.add(new FoodDto("파스타","K-042.png","태국"));
-			list.add(new FoodDto("커피","K-043.png","이탈리아"));
-		model.addAttribute("list", list);
-		return "list3";
+//	@GetMapping("/food/photo/detail") //이걸 더 많이 쓰긴함 
+//	public String list(Model model) {
+//		List<FoodDto> list = new ArrayList<FoodDto>();
+//		list.add(new FoodDto("미국식백반", "K-041.png", "미국"));
+//		list.add(new FoodDto("파스타", "K-042.png", "태국"));
+//		list.add(new FoodDto("커피", "K-043.png", "이탈리아"));
+//		model.addAttribute("list", list);
+//		return "list3";
+//	}
+	
+	@GetMapping("/food/photo/detail") //방법 2
+	public ModelAndView detail() {
+		ModelAndView mview = new ModelAndView();
+		
+		List<String > list = new ArrayList<String>();
+		list.add("K-041.png");
+		list.add("K-042.png");
+		list.add("K-043.png");
+		mview.addObject("food", list);
+		mview.addObject("name", "이승민");
+		mview.addObject("addr", "서울시 강남구");
+
+		mview.setViewName("list3");
+
+		return mview;
 	}
 }
