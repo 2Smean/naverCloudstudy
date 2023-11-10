@@ -10,8 +10,8 @@ public class TestMainAnooEx6 {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("appcontext2.xml");
 		
 		//AnnoCar car1 = (AnnoCar)ctx.getBean("annoCar"); 
-		AnnoCar car1 = (AnnoCar)ctx.getBean("mycar"); //Annocar 에서 값을 @Component("mycar")로 바꿔줬기 때문에
-
+		AnnoCar2 car1 = (AnnoCar2)ctx.getBean("mycar2"); //Annocar 에서 값을 @Component("mycar")로 바꿔줬기 때문에
+		
 		car1.myCarInfo();
 	}
 
