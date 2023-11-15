@@ -46,6 +46,11 @@
 					</c:if>
 					</a>
 				</td>
+				<td>${dto.writer}</td>
+				<td>
+					<fmt:formatDate value="${dto.writeday}" pattern="yyyy.MM.dd"/>
+				</td>
+				<td>${dto.readcount}</td>
 			</tr>
 		</c:forEach>
 		</tbody>
@@ -54,3 +59,30 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
