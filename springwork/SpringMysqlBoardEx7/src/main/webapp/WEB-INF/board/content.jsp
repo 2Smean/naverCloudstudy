@@ -14,7 +14,8 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
 <style>
 body * {
@@ -27,6 +28,19 @@ body * {
 	float: right;
 }
 </style>
+<script type="text/javascript">
+	$(function() {
+		$(".answerdel").click(function() {
+			let idx = $(this).attr("idx");
+			let num = $(this).attr("num");
+
+			let a = confirm("해당 댓글을 삭제하려면 [확인]을 눌러주세요");
+			if (a) {
+				location.href = `./answerdel?num=\${num}&idx=\${idx}`;
+			}
+		});
+	});
+</script>
 </head>
 <body>
 	<div style="margin: 30px; width: 500px;">
@@ -46,20 +60,21 @@ body * {
 				<img src="../upload/${dto.photo}" style="max-width: 400px;">
 			</c:if>
 			<div>
-				<i class="bi bi-chat-dots"></i>&nbsp;${acount}
-				<br><br>
+				<i class="bi bi-chat-dots"></i>&nbsp;${acount} <br>
+				<br>
 				<!-- 댓글 출력  -->
 				<c:forEach var="adto" items="${alist}">
 					<span>${adto.nickname} : ${adto.content}</span>
-					<span style="margin-left: 20px;color: gray;font-size: 0.9em;">
-						<fmt:formatDate value="${adto.writeday}" pattern="yyyy-MM-dd HH:mm"/>
+					<span style="margin-left: 20px; color: gray; font-size: 0.9em;">
+						<fmt:formatDate value="${adto.writeday}"
+							pattern="yyyy-MM-dd HH:mm" />
 					</span>
-					<i class="bi bi-trash answerdel" style="cursor: pointer;"></i>
+					<i class="bi bi-trash answerdel" style="cursor: pointer;"
+						idx="${adto.idx}" num="${dto.num}"></i>
 					<br>
 				</c:forEach>
 			</div>
-			<br>
-			<br>
+			<br> <br>
 			<div style="margin-bottom: 10px;">
 				<form action="./addanswer" method="post">
 					<input type="hidden" name="num" value="${dto.num}">
