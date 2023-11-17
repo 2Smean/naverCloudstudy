@@ -24,6 +24,8 @@ public class StorageRestController {
 		fileName=storageService.uploadFile(bucketName, bucketFolder, upload);
 		String photo80="https://fr2k01411649.edge.naverncp.com/82uyvvqSQa/photo/"+fileName+"?type=f&w=80&h=80&faceopt=true&ttype=jpg";
 		
+		System.out.println(photo80);
+		
 		return photo80; 
 	}
 }

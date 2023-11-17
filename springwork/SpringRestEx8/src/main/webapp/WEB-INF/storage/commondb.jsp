@@ -23,7 +23,7 @@ body * {
 	$(function() {
 		list();
 
-		$("upload").click(function() {
+		$("#upload").change(function() {
 			let form = new FormData();
 			form.append("upload", $("#upload")[0].files[0]);//선택한 파일추가 
 
@@ -63,12 +63,32 @@ body * {
 	<h4>스토리지에 사진 올리기</h4>
 	<div class="input-group" style="width: 600px;">
 		<input type="text" id="title" style="width: 200px;"
-			class="form-control" placeholder="제목넣기"> <input type="file"
-			id="upload" style="width: 200px;" class="form-control">
-		<button type="button" id="btnsend"></button>
+			class="form-control" placeholder="제목넣기">
+		<input type="file" id="upload" style="width: 200px;" class="form-control">
+		<button type="button" id="btnsend">서버 전송</button>
 	</div>
-	80X80 사진만 확인 :
-	<img src="" class="photo80">
+	80X80 사진만 확인 : <img src="" class="photo80">
 	<div class="list" style="margin: 20px;">목록</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
