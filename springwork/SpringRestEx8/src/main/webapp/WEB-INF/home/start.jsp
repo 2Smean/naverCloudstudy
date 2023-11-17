@@ -24,7 +24,36 @@
 	<li>
 		<a href="./memo/list">간단한 메모-사진 1장 업로드 포함</a>
 	</li>
+	<li>
+		<a href="./storage/form">네이버 스토리지에 사진올려보기 연습</a>
+	</li>
+	<li>
+		<a href="./storage/common">네이버 스토리지에 사진 DB 저장</a>
+	</li>
 </ul>
+<hr>
+<!-- <h5>80x80</h5>
+<img src="https://5fkhscmb1655.edge.naverncp.com/nkdT4ckxDb/photo/86cd16f9e93308587d1fbf3a4764d067--genghis-khan-writing-ideas.jpg?type=f&w=80&h=80&faceopt=true&ttype=jpg">
 
+<h5>150x150</h5>
+<img src="https://5fkhscmb1655.edge.naverncp.com/nkdT4ckxDb/photo/86cd16f9e93308587d1fbf3a4764d067--genghis-khan-writing-ideas.jpg?type=f&w=150&h=150&faceopt=true&ttype=jpg">
+<h5>원본사진</h5>
+<img src="https://kr.object.ncloudstorage.com/bitcamp-lsm/photo/86cd16f9e93308587d1fbf3a4764d067--genghis-khan-writing-ideas.jpg"> -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
