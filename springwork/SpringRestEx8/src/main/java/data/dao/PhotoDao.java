@@ -19,7 +19,7 @@ public class PhotoDao {
 		session.insert(nameSpace+"insertPhoto", dto);
 	}
 	
-	public List<PhotoDto> getAllPotos()
+	public List<PhotoDto> getAllPhotos()
 	{
 		return session.selectList(nameSpace+"selectAllPhotos");
 	}
