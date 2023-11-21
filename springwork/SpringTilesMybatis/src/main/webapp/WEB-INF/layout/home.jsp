@@ -15,8 +15,11 @@
        font-family: 'Jua';
    }
    
-   .home_img{
- 		  	
+   .box { 	
+   		width:150px;
+   		height: 150px;
+ 		border-radius: 30%;
+ 		overflow: hidden;
    }
 }
 </style>
@@ -25,11 +28,12 @@
 
 <body>
 <h2>비트캠프에 오신것을 환영합니다</h2>
-<img src="${root}/res/photo/C7.png" class=".home_img">
+<div class="box" style="background:#BDBDBD;">
+<img src="${root}/res/photo/C7.png">
 <img src="${root}/res/photo/K-045.png">
 <img src="${root}/res/photo/K-049.png">
 <img src="${root}/res/photo/K-053.png">
-	
+</div>
 
 </body>
 </html>
