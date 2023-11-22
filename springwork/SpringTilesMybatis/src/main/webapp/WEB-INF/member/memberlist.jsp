@@ -103,10 +103,16 @@
 </script>
 </head>
 <body>
+
+	<c:if test="${sessionScope.loginok==null}">
+		<h3 style="margin: 50px;color: red;">회원 명단을 보려면 먼저 로그인을 해주세요</h3>
+	</c:if>
+	<c:if test="${sessionScope.loginok!=null}">
 <div>
 	<h4>현재 총 ${totalCount}명의 회원이 있습니다</h4>
 	<br>
-	<div class="input-group" style="width: 400px;">
+	<div style="width: 900px;">
+	<div  class="input-group" class="width:400px;">
 		<select id="field" class="form-select">
 			<option hidden disabled selected>검색할필드</option>
 			<option value="name">이름</option>
@@ -119,10 +125,12 @@
 		
 		<button type="button" class="btn btn-success btn-sm" id="btnsearch"
 		style="margin-left: 10px;">검색</button>
-		
-		<div class="searchlist" style="margin-top: 20px;">
+		</div>
+		<div class="searchlist" style="margin-top: 20px;height: 300px;overflow: auto;">
 	</div>
 </div>
+</div>
+</c:if>
 
 </body>
 </html>
