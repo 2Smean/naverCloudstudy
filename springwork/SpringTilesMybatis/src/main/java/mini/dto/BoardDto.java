@@ -19,5 +19,4 @@ public class BoardDto {
 	private List<String> photoNames;
 	private Timestamp writeday;
 	
-	
 }
