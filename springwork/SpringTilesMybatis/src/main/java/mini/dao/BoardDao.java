@@ -1,6 +1,5 @@
 package mini.dao;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,6 +50,16 @@ public class BoardDao {
 	public BoardDto getData(int num)
 	{
 		return session.selectOne(nameSpace+"selectDataByNum", num);
+	}
+	
+	public void updateBoard(BoardDto dto)
+	{
+		session.update(nameSpace+"updateBoard", dto);
+	}
+	
+	public void deleteBoard(int num)
+	{
+		session.delete(nameSpace+"deleteBoard", num);
 	}
 }
 
