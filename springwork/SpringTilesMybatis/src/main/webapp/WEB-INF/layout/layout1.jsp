@@ -57,7 +57,7 @@
    		position: absolute;
    		left: 200px;
    		top: 200px;
-   		width: 700px;
+   		width: 900px;
    		height: 450px;
    }
    
