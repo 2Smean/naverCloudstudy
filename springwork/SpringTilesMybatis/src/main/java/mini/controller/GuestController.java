@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -84,6 +85,7 @@ public class GuestController {
             //System.out.println(response.toString());
             //returnValue=response.toString();
             
+            //message.result.translatedText : json 데이타 추출
             JSONObject ob=new JSONObject(response.toString());
             JSONObject result=ob.getJSONObject("message").getJSONObject("result");
             
@@ -104,6 +106,7 @@ public class GuestController {
 		//dto에 번역 내용도 저장
 		for(GuestDto dto:glist)
 		{
+			//해당 나라 언어로 번역해서 반환 
 			String trans=translate(dto.getGuest_content(), nara);
 			dto.setTrans_lang(trans);
 		}
@@ -175,7 +178,8 @@ public class GuestController {
 	                int read = 0;
 	                byte[] bytes = new byte[1024];
 	                // 랜덤한 이름으로 mp3 파일 생성
-	                String tempname = Long.valueOf(new Date().getTime()).toString();
+	                String tempname = Long.valueOf(new Date().getTime()).toString();//초로 환산
+	                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
 	                
 	                //File f = new File(path + "/newvoice.mp3");
 	                File f =new File(path + "/" + tempname+ ".mp3");
