@@ -27,5 +27,15 @@ public class MyShopService {
 	{
 		return shopMapper.getSangpumList();
 	}
+	
+	public MyShopDto getData(int num)
+	{
+		return shopMapper.getData(num);
+	}
+	
+	public void deleteShop(int num)
+	{
+		shopMapper.deleteShop(num);
+	}
 
 }

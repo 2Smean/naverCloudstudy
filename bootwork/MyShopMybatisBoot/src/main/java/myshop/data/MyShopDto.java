@@ -1,6 +1,7 @@
 package myshop.data;
 
-import java.security.Timestamp;
+
+import java.sql.Timestamp;
 
 import org.apache.ibatis.type.Alias;
 

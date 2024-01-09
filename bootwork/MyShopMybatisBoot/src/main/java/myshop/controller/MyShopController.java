@@ -1,5 +1,7 @@
 package myshop.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +32,12 @@ public class MyShopController {
 	{
 		//총갯수를 얻어온다 
 		int totalCount = shopService.getTotalCount();
+		//전체 목록 가져오기
+		List<MyShopDto> list = shopService.getSangpumList();
+		
 		//model 에 저장한다
 		model.addAttribute("totalCount", totalCount);
+		model.addAttribute("list", list);
 		return "myshop/shoplist";
 	}
 	
@@ -45,11 +51,54 @@ public class MyShopController {
 	public String insert(@ModelAttribute MyShopDto dto, @RequestParam ("upload") MultipartFile upload)
 	{
 		//네이버 스토리지에 업로드 후 저장된 파일명을 리턴받아서 dto 의 photo 에 저장
-		String photo = storageService.uploadFile(bucketName, bucketName, upload);
+		String photo = storageService.uploadFile(bucketName, folderName, upload);
 		dto.setPhoto(photo);
 		//db 에 insert
 		shopService.insertShop(dto);
 		
 		return "redirect:./";
 	}
+	
+	@GetMapping("/detail")
+	public String detail(@RequestParam("num") int num, Model model)
+	{
+		//num에 해당하는 dto 얻기
+		MyShopDto dto = shopService.getData(num);
+		model.addAttribute("dto", dto);
+		return "myshop/shopdetail";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("num") int num)
+	{
+		//db 삭제 전에 스토리지의 기존 사진 부터 삭제 
+		//사진이름 얻기 
+		String photo = shopService.getData(num).getPhoto();
+		//스토리지 사진 삭제 
+		storageService.deleteFile(bucketName, folderName, photo);
+		//db삭제
+		shopService.deleteShop(num);
+		//목록으로 이동
+		return "redirect:./";
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
