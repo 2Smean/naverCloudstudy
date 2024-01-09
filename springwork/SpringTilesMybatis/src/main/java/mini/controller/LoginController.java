@@ -75,7 +75,7 @@ public class LoginController {
 	{
 		//현재 로그인한 아이디 얻기 
 		String myid=(String)session.getAttribute("myid");
-		//사진을 업로드할 결로 
+		//사진을 업로드할 경로 
 		String path=request.getSession().getServletContext().getRealPath("/resources/upload");
 		System.out.println(path);
 		//랜덤 파일명 얻기 
