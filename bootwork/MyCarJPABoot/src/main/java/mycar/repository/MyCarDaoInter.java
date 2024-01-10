@@ -16,7 +16,8 @@ public interface MyCarDaoInter extends JpaRepository<MyCarDto, Long>{
 	//@Query : repository에 원하는 쿼리를 작성하게 해주는 어노테이션
 	//value 속성: 쿼리 작성부 
 	//nativeQuery : JPA에서 지정한 규칙을 모두 무시할 수 있는 속성 
-	@Query(value = """
+	@Query(value = 
+			"""
 			update mycar set carname=:carname,carprice=:carprice,carcolor=:carcolor
 			 where num=:num
 			""",nativeQuery = true)
@@ -25,10 +26,11 @@ public interface MyCarDaoInter extends JpaRepository<MyCarDto, Long>{
 	public void updateMycarNoPhoto(@Param("num") Long num, @Param("carname") String carname,
 			@Param("carprice") int carprice, @Param("carcolor") String carcolor);
 	
-	@Query(value = """
-			update mycar set carname=:#{#dto.carname},carprice=:#{#dto.carprice),
+	@Query(value = 
+			"""
+			update mycar set carname=:#{#dto.carname},carprice=:#{#dto.carprice},
 			carcolor=:#{#dto.carcolor},carguip=:#{#dto.carguip}
-			 where num="#{#dto.num}
+			 where num=:#{#dto.num}
 			""",nativeQuery = true)
 	@Modifying
 	@Transactional
