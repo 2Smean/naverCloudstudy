@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/LsmShopMybatisBoot" />
+    <file type="web" url="file://$PROJECT_DIR$/MyCarJPABoot" />
+    <file type="web" url="file://$PROJECT_DIR$/MyMonsterJPABoot" />
+    <file type="web" url="file://$PROJECT_DIR$/MyShopMybatisBoot" />
+    <file type="web" url="file://$PROJECT_DIR$/MyShopMybatisBoot-test" />
+    <file type="web" url="file://$PROJECT_DIR$/TestBoot" />
+    <file type="web" url="file://$PROJECT_DIR$/TestBoot-1" />
+    <file type="web" url="file://$PROJECT_DIR$/ThymeleafTest" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
