@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LsmShopMybatisBoot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LsmShopMybatisBoot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LsmShopMybatisBoot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LsmShopMybatisBoot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyCarJPABoot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MyCarJPABoot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyMonsterJPABoot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MyMonsterJPABoot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyMonsterJPABoot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MyMonsterJPABoot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyShopMybatisBoot-test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MyShopMybatisBoot-test.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyShopMybatisBoot-test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MyShopMybatisBoot-test.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestBoot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestBoot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestBoot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestBoot.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bootwork.iml" filepath="$PROJECT_DIR$/.idea/bootwork.iml" />
     </modules>
   </component>
