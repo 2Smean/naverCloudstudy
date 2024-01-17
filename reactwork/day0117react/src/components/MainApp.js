@@ -6,7 +6,6 @@ import FourApp from './FourApp';
 import FiveApp from './FiveApp';
 import SixApp from './SixApp';
 import './MyStyle.css';
-import SevenApp from './SevenApp';
 // import SevenApp from './SevenApp';
 // import EightApp from './EightApp';
 
@@ -21,7 +20,7 @@ function MainApp(props) {
 
     return (
         <div style={{ margin: '30px' }}>
-            <h3 className='alert alert-danger'>2024-01-16 리액트 수업</h3>
+            <h3 className='alert alert-danger'>2024-01-17 리액트 수업</h3>
             <label>
                 <input type='radio' name='myapp'
                     defaultValue={1} defaultChecked
@@ -52,12 +51,12 @@ function MainApp(props) {
                     defaultValue={6}
                     onClick={onChangeApp} />SixApp
             </label>
-            <label style={{ marginLeft: '20px' }}>
+            {/* <label style={{ marginLeft: '20px' }}>
                 <input type='radio' name='myapp'
                     defaultValue={7}
                     onClick={onChangeApp} />SevenApp
             </label>
-            {/* <label style={{ marginLeft: '20px' }}>
+            <label style={{ marginLeft: '20px' }}>
                 <input type='radio' name='myapp'
                     defaultValue={8}
                     onClick={onChangeApp} />EightApp
@@ -71,9 +70,7 @@ function MainApp(props) {
                         index === 3 ? <ThreeApp /> :
                             index === 4 ? <FourApp /> :
                                 index === 5 ? <FiveApp /> :
-                                    index === 6 ? <SixApp /> :
-                                        <SevenApp />
-
+                                    <SixApp />
 
             }
 
