@@ -21,5 +21,10 @@ public class GuestDao {
 	{
 		return guestRepository.findAll(Sort.by(Sort.Direction.DESC,"gnum"));
 	}
+	
+	public void deleteGuest (int gnum)
+	{
+		guestRepository.deleteById(gnum);
+	}
 
 }
