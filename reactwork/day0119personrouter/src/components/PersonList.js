@@ -22,8 +22,10 @@ const PersonList = () => {
         const url = "/person/delete?pnum=" + pnum;
         axios.delete(url)
             .then(res => {
+                console.log("삭제 성공")
                 //삭제후 목록 다시 출력
                 personList();
+                console.log("삭제 후 랜더링")
             })
     }
     useEffect(() => {

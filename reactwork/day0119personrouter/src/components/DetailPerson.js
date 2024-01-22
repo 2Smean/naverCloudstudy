@@ -20,7 +20,7 @@ const DetailPerson = () => {
     //처음 로딩시 딱 한번 호출 
     useEffect(() => {
         getSelectData();
-    }, []);
+    });
 
     return (
         <div className='mainbox'>
