@@ -59,6 +59,7 @@ public class SecurityConfiguration {
 			.requestMatchers("/images/**").permitAll()
 			.requestMatchers("/member/*").permitAll() //일단 오류가 안나게 처리 
 			.requestMatchers("/login/auth").permitAll()  
+			.requestMatchers("/board/**").permitAll()  
 			
 			//이외의 요청은 인증된 사용자만 사용자만 사용가능
 			.anyRequest().authenticated();					
